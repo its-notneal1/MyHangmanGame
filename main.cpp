@@ -8,6 +8,14 @@
 
 #include "Library.h"
 
+void clearScreen() {
+	#ifdef _WIN32
+	system("cls");
+	#else
+	system("clear");
+	#endif
+}
+
 
 
 int main() {
@@ -25,12 +33,12 @@ int main() {
 		std::cout << "[2.] Add Words" << std::endl;
 		std::cout << "[3.] Exit Application" << std::endl;
 		std::cout << "Enter Option: ";
-		ASKRESPONSE: std::cin >> choice;
+		std::cin >> choice;
 		switch (choice) {
 		case(1):
 			system("cls");
 			std::cout << "Starting Game" << std::endl;
-			beginGame(words.chooseOneWord());
+			hangmanGame(words.chooseOneWord());
 			break;
 		case(2):
 			std::cout << "Add Word Into List: ";
@@ -42,8 +50,9 @@ int main() {
 		default:
 			std::cin.clear();
 			std::cin.ignore(100, '\n');
+			system("clear");
 			std::cout << "Invalid Option. Enter Again: ";
-			goto ASKRESPONSE;
+			continue;
 		}
 	}
 

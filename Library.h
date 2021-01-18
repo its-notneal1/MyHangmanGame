@@ -14,7 +14,7 @@ private:
 	std::vector<std::string> wordList;
 };
 
-void gameDisplay(int&);
+void gameDisplay(const int&, const std::vector<char>&);
 void printLine();
-
-void beginGame(std::string);
+void clearScreen();
+void hangmanGame(const std::string);
