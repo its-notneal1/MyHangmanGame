@@ -96,7 +96,6 @@ void gameDisplay(const int tries, const std::string& alphabet, const std::string
     std::string line4 = "|                     |\n";
     std::string line5 = "|                     |\n";
     std::string line6 = "|                     |\n";
-    std::string line7 = "|_____________________|\n";
 
     switch (tries) {
     case(7):
@@ -114,7 +113,7 @@ void gameDisplay(const int tries, const std::string& alphabet, const std::string
     case(1):
         line3[11] = '0';
     }
-    std::cout << line1 << line2 << line3 << line4 << line5 << line6 << line7 << alphabet << std::endl << textBar << std::endl;
+    std::cout << line1 << line2 << line3 << line4 << line5 << line6 << line1 << alphabet << std::endl << textBar << std::endl;
     std::cout << tries << " Tries: / 7" << std::endl;
 }
 // damn girl are you a set of stairs, because I keep falling for yo
