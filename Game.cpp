@@ -89,7 +89,7 @@ std::string Words::selectWord() {
     return oneWord;
 }
 
-void gameDisplay(const int tries, const std::string& alphabet, const std::string& textBar) {
+void gameDisplay(const int tries, const std::string alphabet, const std::string textBar) {
     std::string line1 = "_______________________\n";
     std::string line2 = "|          |          |\n";
     std::string line3 = "|                     |\n";
@@ -116,7 +116,6 @@ void gameDisplay(const int tries, const std::string& alphabet, const std::string
     std::cout << line1 << line2 << line3 << line4 << line5 << line6 << line1 << alphabet << std::endl << textBar << std::endl;
     std::cout << tries << " Tries: / 7" << std::endl;
 }
-// damn girl are you a set of stairs, because I keep falling for yo
 void hangmanGame(const std::string luckyWord) {
     std::vector<char> usedChars = { '~' };
     char userGuess;
