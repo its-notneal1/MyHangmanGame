@@ -26,7 +26,7 @@ public:
 void viewEditMenu(Words&);
 
 void clearScreen();
-void gameDisplay(const int, const std::string&, const std::string&);
+void gameDisplay(const int, const std::string, const std::string);
 
 
 void hangmanGame(const std::string);
