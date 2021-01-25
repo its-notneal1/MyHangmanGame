@@ -45,7 +45,7 @@ void Words::addNewWord() {
 
 void Words::removeWord() {
     std::string wordInput;
-    std::cout << "Enter word to be removed" << std::endl;
+    std::cout << "Enter word to be removed: ";
     std::cin >> wordInput;
     for (std::string::size_type i = 0; i < wordInput.size(); i++) wordInput[i] = std::toupper(wordInput[i]);
     std::cout << wordInput << std::endl;
